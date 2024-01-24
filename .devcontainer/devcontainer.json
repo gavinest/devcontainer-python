@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "backend",
+	"build": {
+		"context": ".",
+		"dockerfile": "Dockerfile"
+	},
+	"mounts": [
+		"source=devcontainer-zshistory,target=/commandhistory,type=volume"
+	],
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/guiyomh/features/vim:0": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+	"postCreateCommand": "bash .devcontainer/post_create.sh",
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"vscodevim.vim",
+				"ms-azuretools.vscode-docker",
+				"hashicorp.terraform",
+				"mechatroner.rainbow-csv",
+				"humao.rest-client",
+				"ms-python.black-formatter",
+				"ms-python.isort"
+			],
+			"settings": {
+				"editor.tabSize": 4,
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "zsh"
+					}
+				}
+			}
+		}
+	}
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}
