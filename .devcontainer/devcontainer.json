@@ -1,6 +1,6 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-	"name": "backend",
+	"name": "devcontainer-python",
 	"build": {
 		"context": ".",
 		"dockerfile": "Dockerfile"
