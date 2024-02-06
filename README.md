@@ -1,10 +1,10 @@
-# dev-container
+# devcontainer python
 
-Make [VSCode devcontainers](link to vscode dev containers) feel like home.
+This repo is sets up a devcontainer with the following niceties:
 
-This repo sets up a VSCode devcontainer with the following:
+1. Zsh and [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
+2. [Dotfiles](@/posts/easy-dotfiles-with-chezmoi.md)
+3. Vim
+4. Python and [Poetry](https://python-poetry.org/) and dependencies
 
-* familiar shell setting via [dotfiles](link to blog)
-* [zsh](link to zsh) and [oh-my-zsh](link to oh-my-zsh)
-
-It pairs with my blog [post](link to future post) on the topic.
+It pairs with my [blog post](https://estenssorog.com/posts/devcontainers-that-feel-like-home/) on the topic.
